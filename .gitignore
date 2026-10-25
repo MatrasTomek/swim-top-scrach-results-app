@@ -2,3 +2,4 @@ __pycache__/
 .pytest_cache/
 *.bak
 results.backup-*.json
+results.json
