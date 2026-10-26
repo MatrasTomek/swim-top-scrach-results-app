@@ -12,6 +12,16 @@ python swimtop.py --file lista.txt
 python swimtop.py --file lista.txt URL ... --out inny.json
 ```
 
+`URL_LUB_SLUG` to miejsce do uzupełnienia, a nawiasy kwadratowe oznaczają „opcjonalnie więcej”. W prawdziwym poleceniu wpisz konkretny adres lub slug, np. `python swimtop.py amelia-was-2012`.
+
+### Windows: „nie znaleziono Python”
+
+Komunikat „nie znaleziono Python; uruchom bez argumentów, aby zainstalować z Microsoft Store” oznacza, że `python` jest tylko skrótem do Microsoft Store.
+
+- Sprawdź launcher: `py --version`. Jeśli działa (3.10 lub nowszy), używaj `py swimtop.py ...` zamiast `python swimtop.py ...`.
+- Jeśli `py` też nie działa, zainstaluj Pythona z https://www.python.org/downloads/ i zaznacz „Add python.exe to PATH”, albo wykonaj `winget install Python.Python.3.12`. Potem otwórz nowe okno terminala.
+- Jeśli nadal otwiera się Store, wyłącz *Ustawienia → Aplikacje → Zaawansowane ustawienia aplikacji → Aliasy wykonywania aplikacji* dla `python.exe` i `python3.exe`.
+
 - Zawodnika podajesz jako URL profilu (`https://www.swimtop.pl/zawodnik/amelia-was-2012`) albo sam slug (`amelia-was-2012`).
 - `--file` to plik z listą, jeden URL lub slug w wierszu. Puste wiersze i wiersze zaczynające się od `#` są pomijane. Można łączyć z argumentami w wierszu poleceń.
 - `--out` to plik wynikowy. Domyślnie `results.json` obok skryptu.
